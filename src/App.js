@@ -11,13 +11,15 @@ function App() {
     <BrowserRouter>
       <nav>
         <h1>Supa Smoothies</h1>
-        <Link to="/">Home</Link>
-        <Link to="/create">Create New Smoothie</Link>
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/create">Create New Smoothie</Link>
+        </div>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/:id" element={<Update />} />
+        <Route path="/smoothies/:id" element={<Update />} />
       </Routes>
     </BrowserRouter>
   );
